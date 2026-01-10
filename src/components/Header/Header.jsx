@@ -1,12 +1,34 @@
-import { motion, AnimatePresence } from "framer-motion";
+import {
+  motion,
+  AnimatePresence,
+  useScroll,
+  useMotionValueEvent,
+} from "framer-motion";
 import styles from "./Header.module.css";
 import logo from "../../../public/vite.svg";
 import sprite from "../../icons.svg";
 import useIsDesktop from "../../hooks/useIsDesktop.js";
 import NavigationHeader from "../NavigatinHeader/NavigationHeader.jsx";
+import { useState } from "react";
 
 export default function Header() {
   const isDesktop = useIsDesktop(1024);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const { scrollY } = useScroll();
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const previous = scrollY.getPrevious();
+
+    if (latest > previous && latest > 100) {
+      setIsScrolled(true);
+    } else if (latest < previous) {
+      setIsScrolled(false);
+    }
+
+    if (latest < 50) {
+      setIsScrolled(false);
+    }
+  });
 
   return (
     <motion.header
@@ -19,7 +41,15 @@ export default function Header() {
         {/* 1. ЛОГОТИП */}
         <div className={styles.wrapperLogo}>
           <a href="/">
-            <img className={styles.logo} src={logo} alt="logo" />
+            <motion.img
+              className={styles.logo}
+              src={logo}
+              alt="logo"
+              animate={{
+                maxWidth: isScrolled ? "57px" : isDesktop ? "107px" : "57px",
+              }}
+              transition={{ duration: 0.3 }}
+            />
           </a>
           <ul className={styles.wrapperLogoDescription}>
             <li className={styles.logoDH}>Venera Medical</li>
@@ -112,13 +142,12 @@ export default function Header() {
         </AnimatePresence>
       </div>
       <AnimatePresence>
-        {isDesktop && (
+        {isDesktop && !isScrolled && (
           <motion.div
             key="nav-desktop"
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3 }}
             className={styles.navContainer}
           >
             <NavigationHeader />

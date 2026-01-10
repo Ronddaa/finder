@@ -39,7 +39,6 @@
     border-left: 1px solid #D6B139;
     border-right: 1px solid #D6B139;
     background-color: #F7F1DE;
-    backdrop-filter: blur(10px);
     display: flex;
     flex-direction: column;
     gap: 15px;

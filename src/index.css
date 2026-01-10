@@ -58,6 +58,7 @@ ol {
 }
 a {
   text-decoration: none; /* Убираем подчеркивание ссылок */
+  transition: 0.3s;
 }
 p,
 li,
