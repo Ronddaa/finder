@@ -80,9 +80,13 @@
   fill: #442d0b;
 }
 
+.wrapperContactLinks{
+    display: none;
+}
+
 @media (min-width: 768px) {
   .header {
-    padding: 12px 0;
+    padding: 12px 0 0;
   }
   .logo {
     max-width: 107px;
@@ -118,4 +122,7 @@
   .headerContactLink:hover .contactIcon, .headerContactLink:focus .contactIcon{
     fill: #442d0b;
   }
+   .wrapperBurgerMenu{
+    display: none;
+   }
 }
