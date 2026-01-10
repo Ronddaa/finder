@@ -1,16 +1,89 @@
-# React + Vite
+import { useEffect, useState } from "react";
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+export default function useIsDesktop(breakpoint = 1024) {
+  const [isDesktop, setIsDesktop] = useState(false);
 
-Currently, two official plugins are available:
+  useEffect(() => {
+    const checkScreen = () => {
+      setIsDesktop(window.innerWidth >= breakpoint);
+    };
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+    checkScreen(); // сразу при загрузке
 
-## React Compiler
+    window.addEventListener("resize", checkScreen);
+    return () => window.removeEventListener("resize", checkScreen);
+  }, [breakpoint]);
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+  return isDesktop;
+}
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+import styles from "./Header.module.css";
+import logo from "../../../public/vite.svg";
+import sprite from '../../icons.svg';
+// import useIsDesktop from "../../hooks/useIsDesctop";
+
+export default function Header() {
+    // const {isMobile, isDesctop} = 
+  return (
+    <header className={styles.header}>
+      <div className={`container ${styles.headerContent}`}>
+        <div className={styles.wrapperLogo}>
+          <img className={styles.logo} src={logo} alt="logo" />
+          <ul className={styles.wrapperLogoDescription}>
+            <li className={styles.logoDH}>Venera Medical</li>
+            <li className={styles.logoDL}>Wahlärztin in 1230 Wien</li>
+          </ul>
+        </div>
+        <ul className={styles.wrapperContactLinks}> // только на компьютерах
+          <li>
+            <a className={styles.headerContactLink} href="tel:+436767445330">
+              <svg className={styles.contactIcon} width={24} height={24}>
+                <use xlinkHref={`${sprite}#icon-phone`}></use>
+              </svg>
+              +436767445330
+            </a>
+          </li>
+          <li>
+            <a
+              className={styles.headerContactLink}
+              href="mailto:info@dr-fineder.at"
+            >
+              <svg className={styles.contactIcon} width={24} height={24}>
+                <use xlinkHref={`${sprite}#icon-phone`}></use>
+              </svg>
+              info@dr-fineder.at
+            </a>
+          </li>
+          <li>
+            <a className={styles.headerContactLink} href="#">
+              <svg className={styles.contactIcon} width={24} height={24}>
+                <use xlinkHref={`${sprite}#icon-facebook`}></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a className={styles.headerContactLink} href="#">
+              <svg className={styles.contactIcon} width={24} height={24}>
+                <use xlinkHref={`${sprite}#icon-instagram`}></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a className={styles.headerContactLink} href="#">
+              <svg className={styles.contactIcon} width={24} height={24}>
+                <use xlinkHref={`${sprite}#icon-telegram`}></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <button className={styles.headerBtn}>Termin buchen</button>
+        <div className={styles.wrapperBurgerMenu}> // только на телефоне
+          <svg className={styles.contactIcon} width={24} height={24}>
+            <use xlinkHref={`${sprite}#icon-burger`}></use>
+          </svg>
+        </div>
+      </div>
+    </header>
+  );
+}

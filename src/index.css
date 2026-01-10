@@ -1,14 +1,28 @@
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Roboto";
+  font-family: "Garamond";
   font-style: normal;
-  src: url("./assets/fonts/RobotoFlex-Regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  font-weight: 400;
+  font-display: swap;
+  src: url("./assets/fonts/EBGaramond-Regular.woff2") format("woff2");
 }
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "RobotoMono";
+  font-family: "Garamond";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./assets/fonts/EBGaramond-Italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "SS";
   font-style: normal;
-  src: url("./assets/fonts/RobotoMono-Medium.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  font-display: swap;
+  src: url("./assets/fonts/SourceSans3-Roman.woff2") format("woff2");
+}
+@font-face {
+  font-family: "SS";
+  font-style: italic;
+  font-display: swap;
+  src: url("./assets/fonts/SourceSans3-Italic.woff2") format("woff2");
 }
 
 *,
@@ -22,13 +36,8 @@ html {
   scroll-behavior: smooth; /* Для плавного скролла по якорям и по сайту */
   scrollbar-gutter: stable;
   background-color: #F7F1DE;
-  font-family: "Roboto", sans-serif;
+  font-family: "SS", sans-serif;
   color: #442D0B;
-  height: 200%;
-}
-#root {
-  --font-robotomono: 'RobotoMono', monospace;
-  height: 200%;
 }
 body {
   margin: 0 auto;
@@ -36,12 +45,9 @@ body {
 div {
   position: relative;
 }
-header, footer {
-    padding: 0 16px;
-  }
 section {
   position: relative; /* MOBILE */
-  padding: 25px 16px;
+  padding: 35px 16px;
   overflow: hidden;
 }
 ul,
@@ -69,54 +75,23 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Roboto";
-  font-weight: 600;
+  font-family: "Garamond";
+  font-weight: 400;
   text-transform: uppercase;
 }
 button {
-  font-family: "Roboto";
-  font-weight: 400;
+  font-family: "SS";
+  font-weight: 500;
   transition: 0.3s;
   cursor: pointer;
 }
 .container {  /* MOBILE */
-  max-width: 390px;
+  max-width: calc(375px - 32px);
   margin: 0 auto;
 }
 
-@media (min-width: 768px) {
-  .container {
-    max-width: 1320px; /* Здесь всё ок */
-  }
-  header, footer {
-    padding: 0 30px;
-  }
-  section{
-    padding: 35px 30px;
-  }
-  
-}
-
-@media (min-width: 1320px) {
-  .container {
-    max-width: 1640px;
-  }
-  header, footer {
-    padding: 0 40px;
-  }
-  section{
-    padding: 45px 40px;
-  }
-}
-
-@media (min-width: 1640px) { 
-  .container {
-    max-width: 1920px;
-  }
-  header, footer {
-    padding: 0 50px;
-  }
-  section{
-    padding: 60px 50px;
+@media(min-width: 768px){
+  .container{
+    max-width: 1440px;
   }
 }

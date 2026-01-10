@@ -1,0 +1,121 @@
+.header {
+  padding: 13px 0;
+  border-bottom: 1px solid #d6b139;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+}
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrapperLogo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.logo {
+  max-width: 57px;
+}
+.wrapperLogoDescription {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.logoDH {
+  font-style: italic;
+  font-size: 16px;
+  color: #442d0b;
+  font-family: "Garamond";
+}
+.logoDL {
+  font-size: 9px;
+  color: #442d0b;
+  font-weight: 600;
+}
+.headerBtn {
+  padding: 11px 21px;
+  background: linear-gradient(90deg, #d6b139, #ffe389, #d6b139);
+  background-size: 200% auto; /* Растягиваем фон */
+  transition: background-position 0.3s ease;
+  background-position: left center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  border-radius: 40px;
+  color: #442d0b;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: "SS";
+  transition: background 0.3s;
+}
+.headerBtn:hover,
+.headerBtn:focus {
+  background-position: right center;
+}
+.wrapperBurgerMenu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #442d0b;
+  padding: 8px;
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.wrapperBurgerMenu:focus,
+.wrapperBurgerMenu:hover {
+  background-color: #d6b139;
+}
+.burgerIcon {
+  fill: #f7f1de;
+}
+.wrapperBurgerMenu:hover .burgerIcon,
+.wrapperBurgerMenu:focus .burgerIcon {
+  fill: #442d0b;
+}
+
+@media (min-width: 768px) {
+  .header {
+    padding: 12px 0;
+  }
+  .logo {
+    max-width: 107px;
+  }
+  .logoDH {
+    font-size: 32px;
+  }
+  .logoDL {
+    font-size: 14px;
+  }
+  .wrapperContactLinks {
+    display: flex;
+    gap: 12px;
+    margin-left: auto;
+    margin-right: 20px;
+  }
+  .headerContactLink {
+    color: #442d0b;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: 0.3s;
+  }
+  .contactIcon {
+    fill: #d6b139;
+    transition: 0.3s;
+  }
+  .headerContactLink:hover, .headerContactLink:focus{
+    color: #d6b139;
+  }
+  .headerContactLink:hover .contactIcon, .headerContactLink:focus .contactIcon{
+    fill: #442d0b;
+  }
+}
