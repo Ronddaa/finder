@@ -1,0 +1,78 @@
+.EvaFooterSection{
+    position: relative;
+}
+.footerImg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    opacity: 0.3;
+    z-index: 0;
+}
+.EvaFooterContent{
+    padding: 62px 14px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+}
+.titleEvaFooter{
+    color: #F7F1DE;
+    text-transform: none;
+    text-align: center;
+    max-width: 90%;
+    margin: 0 auto 20px;
+    font-size: 36px;
+    line-height: 1;
+}
+.description{
+    color: #F7F1DE;
+    font-size: 22px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 40px;
+}
+.footerBtn{
+    padding: 11px 21px;
+  background: linear-gradient(90deg, #d6b139, #ffe389, #d6b139);
+  background-size: 200% auto; /* Растягиваем фон */
+  transition: background-position 0.3s ease;
+  background-position: left center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  border-radius: 40px;
+  color: #442d0b;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: "SS";
+  transition: background 0.3s;
+}
+.footerBtn:hover,
+.footerBtn:focus {
+  background-position: right center;
+}
+
+@media(min-width: 768px){
+    .EvaFooterContent{
+        padding: 91px 0 117px;
+    }
+    .titleEvaFooter{
+        font-size: 66px;
+        max-width: 50%;
+        margin-bottom: 38px;
+    }
+    .description{
+        font-size: 32px;
+        max-width: 40%;
+        margin: 0 auto 80px;
+    }
+    .footerBtn{
+        font-size: 26px;
+    }
+}

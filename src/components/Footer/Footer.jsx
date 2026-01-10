@@ -3,12 +3,14 @@ import logo from "../../../public/vite.svg";
 import sprite from "../../icons.svg";
 import useIsDesktop from "../../hooks/useIsDesktop.js";
 import { NavLink } from "react-router-dom";
+import EvaFooter from "./EvaFooter.jsx";
 
 export default function Footer() {
   const isDesktop = useIsDesktop(1024);
 
   return (
-    <footer className={styles.footer}>
+      <footer className={styles.footer}>
+          <EvaFooter />
       <div className={`container ${styles.footerContent}`}>
         <a className={styles.linkMainPage} href="/">
           <img className={styles.logo} src={logo} alt="logo" />
