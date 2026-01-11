@@ -27,7 +27,6 @@
 .wrapperLogoDescription {
   display: flex;
   flex-direction: column;
-  gap: 3px;
 }
 .logoDH {
   font-style: italic;
@@ -38,7 +37,6 @@
 .logoDL {
   font-size: 9px;
   color: #442d0b;
-  font-weight: 600;
 }
 .headerBtn {
   padding: 11px 21px;
