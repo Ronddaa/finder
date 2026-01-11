@@ -4,7 +4,7 @@ import footerIMG from './footerIMG.avif'
 export default function EvaFooter() {
     return (
       <article className={styles.EvaFooterSection}>
-        <img className={styles.footerImg} src={footerIMG} alt="Eva?" />
+        <img className={styles.footerImg} src={footerIMG} alt="Eva?" loading='lazy' />
         <div className={`container ${styles.EvaFooterContent}`}>
           <h2 className={styles.titleEvaFooter}>
             Wünschen Sie ein online Gespräch mit Dr. Fineder?
