@@ -33,9 +33,7 @@ export default function Header() {
 
   return (
     // Убрали initial/animate, чтобы избежать скачка при загрузке
-    <header
-      className={styles.header}
-    >
+    <header className={styles.header}>
       <div className={`container ${styles.headerContent}`}>
         {/* 1. ЛОГОТИП */}
         <div className={styles.wrapperLogo}>
@@ -46,7 +44,7 @@ export default function Header() {
               alt="Venera Medical Logo"
               // Анимируем только ширину
               animate={{
-                width: isScrolled ? 57 : isDesktop ? 107 : 57
+                width: isScrolled ? 57 : isDesktop ? 107 : 57,
               }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
             />
@@ -83,21 +81,33 @@ export default function Header() {
             </a>
           </li>
           <li>
-            <a className={styles.headerContactLink} href="#">
+            <a
+              className={styles.headerContactLink}
+              href="#"
+              aria-label="Facebook"
+            >
               <svg className={styles.contactIcon} width={24} height={24}>
                 <use xlinkHref={`${sprite}#icon-facebook`}></use>
               </svg>
             </a>
           </li>
           <li>
-            <a className={styles.headerContactLink} href="#">
+            <a
+              className={styles.headerContactLink}
+              href="#"
+              aria-label="Instagram"
+            >
               <svg className={styles.contactIcon} width={24} height={24}>
                 <use xlinkHref={`${sprite}#icon-instagram`}></use>
               </svg>
             </a>
           </li>
           <li>
-            <a className={styles.headerContactLink} href="#">
+            <a
+              className={styles.headerContactLink}
+              href="#"
+              aria-label="Telegram"
+            >
               <svg className={styles.contactIcon} width={24} height={24}>
                 <use xlinkHref={`${sprite}#icon-telegram`}></use>
               </svg>
