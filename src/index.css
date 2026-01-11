@@ -47,7 +47,7 @@ div {
 }
 section {
   position: relative; /* MOBILE */
-  padding: 35px 16px;
+  padding: 35px 0;
   overflow: hidden;
 }
 ul,

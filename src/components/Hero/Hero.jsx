@@ -18,7 +18,7 @@ export default function Hero() {
                 src={titleIMG}
                 alt="Venera Medical"
                 className={styles.titleIMG}
-                fetchpriority="high"
+                fetchPriority="high"
                 loading="eager"
                 width="158"
                 height="123"
@@ -53,7 +53,7 @@ export default function Hero() {
           src={heroIMG}
           className={styles.heroIMG}
           alt="Sviatlana Fineder"
-          fetchpriority="high"
+          fetchPriority="high"
           loading="eager"
           width="648"
           height="720"

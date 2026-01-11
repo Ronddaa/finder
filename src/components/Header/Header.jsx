@@ -117,7 +117,7 @@ export default function Header() {
 
         {/* 3. КНОПКА (Всегда на месте) */}
         <a
-          href="https://patient.latido.at/booking/select"
+          href="https://patient.latido.at/booking/select;profileid=6374e6595b5372f6ace4d962;coredataid=63ac3b534945c399efcd3112"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.headerBtn}
