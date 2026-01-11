@@ -6,7 +6,7 @@ import useIsDesktop from "./hooks/useIsDesktop";
 
 export default function App() {
 const isDesktop = useIsDesktop(1024)
-  const marginTopForMain = isDesktop ? 120 : 60;
+  const marginTopForMain = isDesktop ? 160 : 60;
   return (
     <>
       <Header />

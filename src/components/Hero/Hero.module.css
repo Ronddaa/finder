@@ -93,6 +93,9 @@
     line-height: 1;
     margin-bottom: 46px;
   }
+  .sideText{
+    font-size: 60px;
+  }
   .titleIMG {
     width: 158px;
     height: 123px;
@@ -110,10 +113,12 @@
   .descriptionTop {
     font-size: 32px;
   }
+  .descriptionLow{
+    margin-bottom: 60px;
+  }
   .headerBtn {
     font-size: 26px;
-    padding: 25px 63px;
+    padding: 16px 63px;
     max-width: 50%;
-    margin: 0 auto;
   }
 }

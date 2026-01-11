@@ -7,7 +7,7 @@
 }
 .link, .activeLink{
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 500;
     text-transform: uppercase;
     font-family: "SS";
     display: flex;
@@ -46,7 +46,6 @@
 .subLink{
     transition: 0.3s;
     color: #442D0B;
-    font-weight: 600;
 }
 .subLink:hover, .subLink:focus{
     color: #D6B139;
