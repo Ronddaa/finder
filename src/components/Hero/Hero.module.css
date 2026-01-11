@@ -4,22 +4,25 @@
   gap: 25px;
 }
 .mainTitle {
-  font-size: 26px;
+  font-size: 30px;
   display: flex;
   flex-direction: column;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 .mainTitle,
 .nameTitle,
 .bottomTitle {
   color: #b6771d;
+  line-height: 1.2;
 }
 .subTitle,
 .nameTitle,
 .bottomTitle{
   font-style: italic;
+  line-height: 1;
 }
 .sideText {
+  font-size: 26px;
   color: #442d0b;
   display: flex;
   flex-direction: column;
@@ -38,15 +41,11 @@
 .descriptionTop,
 .descriptionLow {
   color: #442d0b;
-  font-size: 16px;
-  font-weight: 600;
-  text-align: center;
+  font-size: 15px;
+  line-height: 1;
 }
 .descriptionTop {
-  margin-bottom: 10px;
-}
-.descriptionLow {
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 .heroIMG {
   border-radius: 15px;
@@ -68,9 +67,9 @@
   align-self: center;
   border-radius: 40px;
   color: #442d0b;
-  font-size: 12px;
+  font-size: 16px;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 500;
   font-family: "SS";
   transition: background 0.3s;
 }
