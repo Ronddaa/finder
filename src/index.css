@@ -36,7 +36,7 @@ html {
   scroll-behavior: smooth; /* Для плавного скролла по якорям и по сайту */
   scrollbar-gutter: stable;
   background-color: #F7F1DE;
-  font-family: "SS", sans-serif;
+  font-family: "SS";
   color: #442D0B;
 }
 body {
@@ -87,7 +87,7 @@ button {
   cursor: pointer;
 }
 .container {  /* MOBILE */
-  max-width: calc(375px - 32px);
+  max-width: calc(375px - 22px);
   margin: 0 auto;
 }
 

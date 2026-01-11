@@ -18,8 +18,10 @@ export default function Hero() {
                 src={titleIMG}
                 alt="Venera Medical"
                 className={styles.titleIMG}
-                width={158}
-                height={123}
+                fetchpriority="high"
+                loading="eager"
+                width="158"
+                height="123"
               />
               <span className={styles.sideText}>
                 <span>Fachärztliche</span>
@@ -47,7 +49,15 @@ export default function Hero() {
             </a>
           )}
         </article>
-        <img src={heroIMG} className={styles.heroIMG} alt="Sviatlana Fineder" />
+        <img
+          src={heroIMG}
+          className={styles.heroIMG}
+          alt="Sviatlana Fineder"
+          fetchpriority="high"
+          loading="eager"
+          width="648"
+          height="720"
+        />
         {!isDesktop && (
           <a
             href="https://patient.latido.at/booking/select;profileid=6374e6595b5372f6ace4d962;coredataid=63ac3b534945c399efcd3112"
