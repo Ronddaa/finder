@@ -13,6 +13,10 @@
 .nameTitle,
 .bottomTitle {
   color: #b6771d;
+}
+.subTitle,
+.nameTitle,
+.bottomTitle{
   font-style: italic;
 }
 .sideText {
