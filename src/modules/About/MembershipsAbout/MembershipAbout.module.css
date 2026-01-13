@@ -1,0 +1,56 @@
+.membershipAboutSection{
+    position: relative;
+}
+.membershipAboutSection::after{
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    height: 1px;    
+    width: 100%;
+    background-image: linear-gradient(
+    to right,
+    #b6771d 50%,
+    rgba(255, 255, 255, 0) 0%
+  );
+  background-position: bottom;
+  background-size: 25px 1px;
+  background-repeat: repeat-x;
+}
+.title{
+    font-size: 36px;
+    text-transform: none;
+    margin-bottom: 20px;
+    color: #C99631;
+
+}
+.wrapperList{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.elementList{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 18px;   
+}
+.star{
+    fill: #C99631;
+    flex-shrink: 0;
+    width: 15px;
+    height: 15px;
+}
+
+@media(min-width:768px){
+    .title{
+        font-size: 66px;
+        margin-bottom: 50px;
+    }
+    .wrapperList{
+        gap: 42px;
+    }
+    .elementList{
+        font-size: 32px;
+    }
+}

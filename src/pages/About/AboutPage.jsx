@@ -2,6 +2,7 @@ import Reviews from "../../components/Reviews/Reviews"
 import EducationAbout from "../../modules/About/EducationAbout/EducationAbout"
 import HeroAbout from "../../modules/About/HeroAbout/HeroAbout"
 import MeAbout from "../../modules/About/MeAbout/MeAbout"
+import MembershipAbout from "../../modules/About/MembershipsAbout/MembershipAbout"
 
 export default function AboutPage() {
     return (
@@ -9,6 +10,7 @@ export default function AboutPage() {
             <HeroAbout />
             <MeAbout />
             <EducationAbout />
+            <MembershipAbout />
             <Reviews />
         </>
     )
