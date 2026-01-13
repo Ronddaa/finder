@@ -3,7 +3,7 @@ import Header from "./components/Header/Header";
 import MainPage from "./pages/MainPage/MainPage";
 import Footer from "./components/Footer/Footer";
 import useIsDesktop from "./hooks/useIsDesktop";
-import ProposForMedicalPage from "./pages/PropsForMediaclPage";
+import ProposForMedicalPage from "./pages/PropsForMedical/PropsForMediaclPage";
 import AboutPage from "./pages/About/AboutPage";
 
 export default function App() {

@@ -1,0 +1,59 @@
+.title{
+    color: #C99631;
+    text-align: center;
+    font-size: 36px;
+    text-transform: none;
+    margin-bottom: 15px;
+}
+.mainText{
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.wrapperMeInfo{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 20px;
+}
+.meAboutIMG{
+    border-radius: 30px;
+}
+.meInfoList{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.meInfoText{
+    font-size: 18px;
+    max-width: 95%;
+}
+.meInfoText span{
+    font-weight: 600;
+}
+
+@media(min-width:768px){
+    .title{
+        font-size: 70px;
+        max-width: 70%;
+        margin: 0 auto 35px;
+    }
+    .mainText{
+        font-size: 32px;
+        max-width: 70%;
+        margin: 0 auto 100px;
+    }
+    .wrapperMeInfo{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .meInfoList{
+        max-width: 740px;
+        gap: 35px;
+    }
+    .meInfoText{
+        font-size: 32px;
+    }
+    .meAboutIMG{
+        max-width: 509px;
+    }
+}
