@@ -9,28 +9,73 @@ const navItems = [
   {
     name: "Über mich",
     path: "/about",
-    submenu: [
-      { name: "Lebenslauf", path: "/about/cv" },
-      { name: "Philosophie", path: "/about/philosophy" },
-    ],
+    submenu: [{ name: "Kundenbewertung", path: "/about/kundenbewertung" }],
   },
   {
     name: "Behandlungsangebot",
-    path: "/services",
+    path: "/behandlungsangebote",
     submenu: [
-      { name: "Frauenheilkunde", path: "/services/gynecology" },
-      { name: "Geburtshilfe", path: "/services/obstetrics" },
+      { name: "Kundenbewertung", path: "/behandlungsangebote/kundenbewertung" },
+      { name: "Akupunktur", path: "/behandlungsangebote/akupunktur" },
+      {
+        name: "Regenerative & Ästhetische Medizin",
+        path: "/behandlungsangebote/regenerative",
+        // ВЛОЖЕННОЕ МЕНЮ (3-й уровень)
+        submenu: [
+          {
+            name: "Botox Behandlung",
+            path: "/behandlungsangebote/regenerative/botox",
+          },
+          {
+            name: "Faltenbehandlung mit Hyaluronsäure",
+            path: "/behandlungsangebote/regenerative/hyaluron",
+          },
+          {
+            name: "Faltenbehandlung mit Radiesse®",
+            path: "/behandlungsangebote/regenerative/radiesse",
+          },
+          {
+            name: "Fadenlifting",
+            path: "/behandlungsangebote/regenerative/fadenlifting",
+          },
+          {
+            name: "Lippen aufspritzen",
+            path: "/behandlungsangebote/regenerative/lippen",
+          },
+          {
+            name: "Plasmalifting / PRP",
+            path: "/behandlungsangebote/regenerative/prp",
+          },
+          {
+            name: "Biorevitalisierung",
+            path: "/behandlungsangebote/regenerative/biorevitalisierung",
+          },
+          {
+            name: "Regenerative Medizin für Männer",
+            path: "/behandlungsangebote/regenerative/men",
+          },
+          {
+            name: "PREISLISTE ÄSTHETISCHE MEDIZIN",
+            path: "/prices/preisliste",
+          },
+        ],
+      },
+      { name: "IV-Therapie", path: "/behandlungsangebote/iv-therapie" },
+      {
+        name: "Vorsorgeuntersuchung",
+        path: "/behandlungsangebote/vorsorgeuntersuchung",
+      },
+      { name: "Mounjaro®", path: "/behandlungsangebote/mounjaro" },
     ],
   },
-  { name: "Meine Preise", path: "/prices" },
   {
-    name: "Kontakt",
-    path: "/contact",
+    name: "Meine Preise",
+    path: "/prices",
     submenu: [
-      { name: "Standort", path: "/contact/location" },
-      { name: "Anfahrt", path: "/contact/directions" },
+      { name: "PREISLISTE ÄSTHETISCHE MEDIZIN", path: "/prices/preisliste" },
     ],
   },
+  { name: "Kontakt", path: "/kontact" },
 ];
 
 export default function NavigationHeader() {

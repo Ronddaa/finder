@@ -1,6 +1,6 @@
 import styles from './About.module.css'
-import useIsDesktop from '../../hooks/useIsDesktop';
-import BtnWithImage from '../Buttons/WithImage/BtnWithImage';
+import useIsDesktop from '../../../hooks/useIsDesktop';
+import BtnWithImage from '../../../components/Buttons/WithImage/BtnWithImage';
 import meAboutIMGOne from './aboutImgOne.avif'
 import meAboutIMGTwo from './aboutImgTwo.avif'
 

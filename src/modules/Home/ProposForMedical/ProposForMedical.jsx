@@ -1,5 +1,5 @@
 import styles from "./ProposForMedical.module.css";
-import sprite from "../../icons.svg";
+import sprite from "../../../icons.svg";
 
 export default function ProposForMedical() {
   return (

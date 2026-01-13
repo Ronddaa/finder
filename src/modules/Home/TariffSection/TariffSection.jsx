@@ -1,5 +1,5 @@
 import styles from "./TariffSection.module.css";
-import logo from "../../../public/vite.svg";
+import logo from "../../../../public/vite.svg";
 
 export default function TariffSection() {
   return (

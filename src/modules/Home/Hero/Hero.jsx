@@ -1,7 +1,7 @@
 import styles from "./Hero.module.css";
 import titleIMG from "./titleIMG.avif";
 import heroIMG from "./hero.avif";
-import useIsDesktop from "../../hooks/useIsDesktop";
+import useIsDesktop from "../../../hooks/useIsDesktop";
 
 export default function Hero() {
   const isDesktop = useIsDesktop(1024);
