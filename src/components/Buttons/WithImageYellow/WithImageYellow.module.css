@@ -1,0 +1,51 @@
+.wrapperBtnWithImage{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+.headerBtn {
+  padding: 11px 21px;
+  background: linear-gradient(90deg, #d6b139, #ffe389, #d6b139);
+  background-size: 200% auto; /* Растягиваем фон */
+  transition: background-position 0.3s ease;
+  background-position: left center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  border-radius: 40px;
+  color: #442d0b;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: "SS";
+  transition: background 0.3s;
+}
+.headerBtn:hover,
+.headerBtn:focus {
+  background-position: right center;
+}
+.BtnWI{
+    max-height: 40px;
+    max-width: 172px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 40px;
+    display: none;
+}
+
+@media(min-width:768px){
+    .wrapperBtnWithImage{
+        justify-content: space-between;
+    }
+    .headerBtn{
+        font-size: 26px;
+        padding: 25px 63px;
+        width: 50%;
+    }
+    .BtnWI{
+        display: block;
+        max-width: 50%;
+        max-height: 100%;
+    }
+}

@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import styles from "./BtnWithImage.module.css";
-import BtnWI from "./btnWI.avif";
+import BtnWI from "../btnWI.avif";
 import sprite from "../../../icons.svg";
 
 export default function BtnWithImage({ linkTo }) {

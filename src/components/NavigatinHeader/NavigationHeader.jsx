@@ -70,11 +70,11 @@ const navItems = [
   },
   {
     name: "Meine Preise",
-    path: "/behandlungsangebote",
+    path: "/prices",
     submenu: [
       {
         name: "PREISLISTE ÄSTHETISCHE MEDIZIN",
-        path: "/behandlungsangebote/preisliste",
+        path: "/prices/preisliste",
       },
     ],
   },
