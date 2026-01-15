@@ -63,5 +63,6 @@
     .textMore{
         font-size: 32px;
         max-width: 80%;
+        margin: 150px auto 0;
     }
 }
