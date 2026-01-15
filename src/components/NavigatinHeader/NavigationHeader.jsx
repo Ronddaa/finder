@@ -2,7 +2,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom"; // NavLink автоматически добавляет класс "active"
 import { motion, AnimatePresence } from "framer-motion";
 import styles from "./NavigationHeader.module.css";
-import sprite from '../../icons.svg'
+import sprite from "../../icons.svg";
 
 const navItems = [
   { name: "Home", path: "/" },
@@ -54,10 +54,6 @@ const navItems = [
             name: "Regenerative Medizin für Männer",
             path: "/behandlungsangebote/regenerative/men",
           },
-          {
-            name: "PREISLISTE ÄSTHETISCHE MEDIZIN",
-            path: "/prices/preisliste",
-          },
         ],
       },
       { name: "IV-Therapie", path: "/behandlungsangebote/iv-therapie" },
@@ -83,6 +79,7 @@ const navItems = [
 
 export default function NavigationHeader() {
   const [activeSubmenu, setActiveSubmenu] = useState(null);
+  const [activeNestedSubmenu, setActiveNestedSubmenu] = useState(null);
 
   return (
     <nav className={styles.nav}>
@@ -92,7 +89,10 @@ export default function NavigationHeader() {
             key={item.name}
             className={styles.navItem}
             onMouseEnter={() => item.submenu && setActiveSubmenu(item.name)}
-            onMouseLeave={() => setActiveSubmenu(null)}
+            onMouseLeave={() => {
+              setActiveSubmenu(null);
+              setActiveNestedSubmenu(null); // Закрываем всё при уходе мыши
+            }}
           >
             <NavLink
               to={item.path}
@@ -108,7 +108,7 @@ export default function NavigationHeader() {
               )}
             </NavLink>
 
-            {/* Выпадающее меню */}
+            {/* Первый уровень выпадающего меню */}
             <AnimatePresence>
               {item.submenu && activeSubmenu === item.name && (
                 <motion.ul
@@ -118,10 +118,51 @@ export default function NavigationHeader() {
                   exit={{ opacity: 0, y: -10 }}
                 >
                   {item.submenu.map((sub) => (
-                    <li key={sub.name}>
+                    <li
+                      key={sub.name}
+                      className={styles.submenuItem}
+                      onMouseEnter={() =>
+                        sub.submenu && setActiveNestedSubmenu(sub.name)
+                      }
+                      onMouseLeave={() => setActiveNestedSubmenu(null)}
+                    >
                       <NavLink to={sub.path} className={styles.subLink}>
                         {sub.name}
+                        {/* Добавляем стрелочку, если есть 3-й уровень */}
+                        {sub.submenu && (
+                          <svg
+                            className={`${styles.navigationArrow} ${styles.arrowRight}`}
+                            width={10}
+                            height={6}
+                          >
+                            <use
+                              xlinkHref={`${sprite}#icon-navigationArrow`}
+                            ></use>
+                          </svg>
+                        )}
                       </NavLink>
+
+                      <AnimatePresence>
+                        {sub.submenu && activeNestedSubmenu === sub.name && (
+                          <motion.ul
+                            className={styles.nestedSubmenu}
+                            initial={{ opacity: 0, x: 10 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            exit={{ opacity: 0, x: 10 }}
+                          >
+                            {sub.submenu.map((nested) => (
+                              <li key={nested.name}>
+                                <NavLink
+                                  to={nested.path}
+                                  className={styles.subLink}
+                                >
+                                  {nested.name}
+                                </NavLink>
+                              </li>
+                            ))}
+                          </motion.ul>
+                        )}
+                      </AnimatePresence>
                     </li>
                   ))}
                 </motion.ul>

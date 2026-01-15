@@ -1,52 +1,82 @@
-.navList{
-    margin-top: 12px;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    border-top: 1px  solid #D6B139;
+.navList {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  border-top: 1px solid #d6b139;
 }
-.link, .activeLink{
-    font-size: 20px;
-    font-weight: 500;
-    text-transform: uppercase;
-    font-family: "SS";
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    color: #442D0B;
-    transition: 0.3s;
-    padding: 12px 0;
+.link,
+.activeLink {
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: "SS";
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #442d0b;
+  transition: 0.3s;
+  padding: 12px 0;
 }
-.link:hover, .link:focus{
-    color: #D6B139;
+.link:hover,
+.link:focus {
+  color: #d6b139;
 }
-.activeLink{
-    color: #D6B139;
+.activeLink {
+  color: #d6b139;
 }
-.navigationArrow{
-    transition: 0.3s;
+.navigationArrow {
+  transition: 0.3s;
 }
-.link:hover .navigationArrow, .link:focus .navigationArrow{
-    transform: rotate(-180deg);
+.link:hover .navigationArrow,
+.link:focus .navigationArrow {
+  transform: rotate(-180deg);
 }
-.submenu{
-    min-width: 200px;
-    position: absolute;
-    z-index: 2;
-    padding: 15px;
-    border-radius: 0 0 10px 10px;
-    border-bottom: 2px solid #D6B139;
-    border-left: 1px solid #D6B139;
-    border-right: 1px solid #D6B139;
-    background-color: #F7F1DE;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+.submenu {
+  min-width: 300px;
+  position: absolute;
+  z-index: 2;
+  padding: 15px 0;
+  border-radius: 0 0 10px 10px;
+  border-bottom: 2px solid #d6b139;
+  border-left: 1px solid #d6b139;
+  border-right: 1px solid #d6b139;
+  background-color: #f7f1de;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
-.subLink{
-    transition: 0.3s;
-    color: #442D0B;
+.subLink {
+  transition: 0.3s;
+  color: #442d0b;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0 15px;
 }
-.subLink:hover, .subLink:focus{
-    color: #D6B139;
+.subLink:hover,
+.subLink:focus {
+  color: #d6b139;
+}
+.navItem,
+.submenuItem {
+  position: relative;
+}
+.nestedSubmenu {
+  position: absolute;
+  top: -40px;
+  left: 100%;
+  min-width: 250px;
+  z-index: 3;
+  padding: 15px;
+  background-color: #f7f1de;
+  border: 1px solid #d6b139;
+  border-radius: 0 10px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.subLink:hover .arrowRight, 
+.subLink:focus .arrowRight {
+    transform: rotate(-90deg);
 }

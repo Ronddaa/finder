@@ -57,6 +57,8 @@
     }
     .mainImg{
         margin-bottom: 0;
+        max-width: 648px;
+        object-fit: cover;
     }
     .textMore{
         font-size: 32px;
