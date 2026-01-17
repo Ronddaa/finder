@@ -1,4 +1,65 @@
 export const faqServicesContent = {
+  "/behandlungsangebote/kundenbewertung": [
+    {
+      question:
+        "Warum soll ich mich für eine Wahlärztin/einen Wahlarzt entscheiden?",
+      answer:
+        "Wahlärztinnen/Wahlärzte haben keinen Kassenvertrag, was bedeutet, dass sie die Leistungen nicht direkt mit der Krankenversicherung verrechnen, sondern den Patienten eine Honorarnote (Rechnung) ausstellen. In einer Wahl-Praxis kann Ihnen die Ärztin/der Arzt mehr Zeit widmen, somit noch genauer und besser auf Ihre Probleme und Fragen eingehen. Hochqualitative Versorgung, das Eingehen auf all Ihre Fragen, sowie verschiedene, sinnvolle und auf letzten Erkenntnissen beruhende medizinische Leistungen sind dadurch leichter möglich.",
+    },
+    {
+      question: "Wie erfolgt die Verrechnung der Behandlungskosten?",
+      answer:
+        "Sie erhalten nach der Behandlung eine Honorarnote (Rechnung) mit Zahlschein und können den in Rechnung gestellten Betrag überweisen. Nach der Bezahlung senden Sie bitte die saldierte Rechnung inklusive Zahlungsbeleg an Ihre Krankenversicherung mit dem Ersuchen um Kostenrückerstattung. Sie erhalten einen Teil der Behandlungskosten rückerstattet. Die Höhe der Rückerstattung ist je nach Krankenversicherung und abgerechneter Leistung unterschiedlich.",
+    },
+    {
+      question:
+        "Mit welchen Problemen wenden sich Patienten am häufigsten an ihren Wahlärztin/Wahlarzt?",
+      answer:
+        "Dies ist zunächst einmal Bluthochdruck, wenn die Dosis von Medikamenten schrittweise geändert oder neue Medikamente ausgewählt werden müssen. Auch Patienten mit chronischen Rücken-, Nacken- oder Gelenkschmerzen, Schlafstörungen, Neigung zu Depressionen und Allergien sind dabei.",
+    },
+    {
+      question: "Was sind Ihre Aufgaben als Wahlärztin?",
+      answer:
+        "Ich als Wahlärztin untersuche Sie, erhebe eine Anamnese, stelle eine Vordiagnose, messe den Blutdruck und Puls, nehme ein EKG auf und werte es aus, verschreibe Medikamente und Physiotherapie, stelle Rezepte aus und schreibe bei Bedarf eine Überweisung zu Untersuchungen und Zusatzuntersuchungen wie z.b. Röntgen, MRT, sowie eine Überweisung an einen Facharzt oder Rehabilitation. Und natürlich kontrolliere ich die vorgeschriebene Behandlung und kümmere mich um die Vorbeugung von Krankheiten.",
+    },
+    {
+      question: "Beschäftigen Sie sich mit eine Long-Covid-Therapie?",
+      answer:
+        "Bei dieser Pathologie verwende ich sowohl spezielle Akupunkturtechniken als auch hochdosiertes Vitamin C Infusionen.",
+    },
+    {
+      question: "Mit welchen Fachärzten arbeiten Sie zusammen?",
+      answer:
+        "Ich verfüge über beste Kontakte zu renommierten, erfahrenen Fachärzten und Spezialisten wie einem Gynäkologen, einem Orthopäden, einem Neurologen, sowie Rheumatologen und Homöopathen.",
+    },
+    {
+      question: "Was passiert, wenn ich nicht zum vereinbarten Termin komme?",
+      answer:
+        "Falls Sie Ihren Termin nicht einhalten können, bitte ich Sie mir dies frühestmöglich, spätestens jedoch 2 Tage vorher schriftlich per E-Mail: info@dr-fineder.at bekannt zu geben. Sollten Termine nicht rechtzeitig abgesagt werden, muss ich das Behandlungshonorar in voller Höhe (Behandlungskosten und Beratungskosten) verrechnen.",
+    },
+  ],
+  "/behandlungsangebote/akupunktur": [
+    {
+      question: "Was geschieht bei der ersten Konsultation?",
+      answer:
+        "Die erste Konsultation dauert normalerweise länger als die darauffolgenden Sitzungen.Die Diagnose setzt sich aus vier klassischen Diagnosemethoden zusammen, der Befragung, der Betrachtung, dem Tasten und dem Hören bsw Riechen. Aus diesem vier Diagnosemethoden kann sich der Arzt ein Bild der Disharmonie machen und wird Ihre individuelle Therapie ausgewählt.",
+    },
+    {
+      question: "Kann die Akupunktur in der Schwangerschaft angewandt werden?",
+      answer:
+        "Akupunktur wird recht häufig zur Geburtsvorbereitung angewendet, meist ab der 36. Schwangerschaftswoche mit einer Regelmäßigkeit von einmal wöchentlich für 30 Minuten. Akupunkturtechniken während der Schwangerschaft sind sanft. Die Stimulation von neun Akupunkturpunkten während der Schwangerschaft ist kontraindiziert.",
+    },
+    {
+      question: "Können Kinder mit Akupunktur behandelt werden?",
+      answer:
+        "Ja, Kinder können mit Akupunktur behandelt werden. Meistens sprechen Kinder sehr gut und schnell auf die Therapie an.",
+    },
+    {
+      question: "Wird Akupunktur in der ästhetischen Medizin eingesetzt?",
+      answer:
+        "Ja, die gleichzeitige Stimulation mehrerer Punkte im Gesicht und Dekolleté regt die Kollagenproduktion im eigenen Gewebe an und verbessert so die Hautqualität aufgrund der eigenen Reserven.",
+    },
+  ],
   "/behandlungsangebote/regenerative/botox": [
     {
       question: "Was ist die Besonderheit moderner Botox-Präparate?",
@@ -154,7 +215,8 @@ export const faqServicesContent = {
     {
       question:
         "Ab welchem Alter sind regenerative und ästhetische Behandlungen sinnvoll?",
-      answer: "Ein präventiver Ansatz kann bereits ab dem 30. bis 35. Lebensjahr sinnvoll sein. Die konkrete Indikation richtet sich jedoch stets nach individuellen Bedürfnissen und medizinischen Kriterien. Ärztliche Betreuung & Individualität Alle Behandlungen erfolgen nach ärztlicher Beratung und unter Berücksichtigung medizinischer Standards in unserer Ordination in Wien. Ziel ist ein ganzheitlicher Ansatz, der Prävention, Regeneration und Ästhetik sinnvoll miteinander verbindet.",
+      answer:
+        "Ein präventiver Ansatz kann bereits ab dem 30. bis 35. Lebensjahr sinnvoll sein. Die konkrete Indikation richtet sich jedoch stets nach individuellen Bedürfnissen und medizinischen Kriterien. Ärztliche Betreuung & Individualität Alle Behandlungen erfolgen nach ärztlicher Beratung und unter Berücksichtigung medizinischer Standards in unserer Ordination in Wien. Ziel ist ein ganzheitlicher Ansatz, der Prävention, Regeneration und Ästhetik sinnvoll miteinander verbindet.",
     },
   ],
 };
