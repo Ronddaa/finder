@@ -22,27 +22,27 @@
   background-size: 25px 1px;
   background-repeat: repeat-x;
 }
-.wrapperMain_information{
+.wrapperList{
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-.paragraph{
+.text{
     font-size: 18px;
 }
-
-@media(min-width: 768px){
+@media(min-width:768px){
     .title{
-        font-size: 3vw;
+        font-size: 54px;
     }
     .title::after{
         left: -40%;
         width: 200%;
     }
-    .wrapperMain_information{
+    .wrapperList{
         gap: 40px;
+        max-width: 80%;
     }
-    .paragraph{
+    .text{
         font-size: 32px;
     }
 }
