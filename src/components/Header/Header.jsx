@@ -10,11 +10,13 @@ import logo from "../../../public/vite.svg";
 import sprite from "../../icons.svg";
 import useIsDesktop from "../../hooks/useIsDesktop.js";
 import NavigationHeader from "../NavigatinHeader/NavigationHeader.jsx";
+import BurgerModal from "../Burger/Burger.jsx";
 
 export default function Header() {
   const isDesktop = useIsDesktop(1024);
   const [isScrolled, setIsScrolled] = useState(false);
   const { scrollY } = useScroll();
+  const [modalBurger, setModalBurger] = useState(false);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious();
@@ -127,9 +129,22 @@ export default function Header() {
 
         {/* 4. БУРГЕР (Mobile) */}
         {!isDesktop && (
-          <div className={styles.wrapperBurgerMenu}>
-            <svg className={styles.burgerIcon} width={24} height={24}>
-              <use xlinkHref={`${sprite}#icon-burger`}></use>
+          <div
+            className={styles.wrapperBurgerMenu}
+            // Переключаем состояние: если открыто — закрываем, если закрыто — открываем
+            onClick={() => setModalBurger((prev) => !prev)}
+          >
+            <svg
+              className={styles.burgerIcon}
+              width={modalBurger ? 16 : 24}
+              height={modalBurger ? 16 : 24}
+            >
+              {/* Если modalBurger true, подставляем иконку close, иначе burger */}
+              <use
+                xlinkHref={`${sprite}#${
+                  modalBurger ? "icon-close" : "icon-burger"
+                }`}
+              ></use>
             </svg>
           </div>
         )}
@@ -150,6 +165,7 @@ export default function Header() {
           </motion.div>
         )}
       </AnimatePresence>
+      <BurgerModal isOpen={modalBurger} onClose={() => setModalBurger(false)} />
     </header>
   );
 }

@@ -1,5 +1,5 @@
 .footer{
-    background-color: #442D0B;
+    background-color: #F4EDDD;
     padding: 0 0 40px;
 }
 .logo{
@@ -10,7 +10,7 @@
     margin-bottom: 50px;
 }
 .titles{
-    color: #F7F1DE;
+    color: #442D0B;
     font-size: 22px;
     font-weight: 600;
     text-transform: uppercase;
@@ -31,12 +31,12 @@
     gap: 25px;
 }
 .adressLink{
-    color: #F7F1DE;
+    color: #442D0B;
     font-size: 20px;
     font-weight: 600;
 }
 .footerContactLink{
-    color: #F7F1DE;
+    color: #442D0B;
     font-size: 20px;
     font-weight: 600;
     display: flex;
@@ -48,19 +48,19 @@
     transition: 0.3s;
 }
 .contactIcon:hover, .contactIcon:focus{
-    fill: #F7F1DE;
+    fill: #442D0B;
 }
 .wrapperSocialLinks{
     display: flex;
     gap: 10px;
 }
 .footerLinks{
-    color: #F7F1DE;
+    color: #442D0B;
     font-size: 20px;
 }
 .cTextFooter{
     margin-top: 50px;
-    color: #F7F1DE80;
+    color: #442D0B80;
     padding: 15px 0;
     text-align: center;
     border-top: 1px solid #D6B139;
@@ -94,7 +94,7 @@
         font-size: 26px;
     }
     .footerNavogationLink{
-        color: #F7F1DE;
+        color: #442D0B;
         font-size: 24px;
     }
     .adressLink, .footerContactLink, 
