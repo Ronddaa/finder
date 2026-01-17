@@ -4,11 +4,13 @@ import FaqServices from "../../modules/Services/FaqServices/FaqServices";
 import HeroServices from "../../modules/Services/HeroServices/HeroServices";
 import IndicationsServices from "../../modules/Services/IndicationsSevices/IndicationsServives";
 import MyServices from "../../modules/Services/MyServices/MyServices";
+import OfferServices from "../../modules/Services/OfferServices/OfferServices";
 
 export default function ServicesPage(){
     return (
       <>
-        <HeroServices />
+            <HeroServices />
+            <OfferServices /> {/* /behandlungsangebote/regenerative */}
         <MyServices /> {/* /behandlungsangebote/kundenbewertung */} {/* /behandlungsangebote/akupunktur */}
         <AdvantagesServices /> {/* /behandlungsangebote/kundenbewertung */} {/* /behandlungsangebote/akupunktur */}
         <IndicationsServices /> {/* /behandlungsangebote/akupunktur */}
