@@ -1,4 +1,5 @@
 import AdvantagesServices from "../../modules/Services/AdvantagesServices/AdvantagesServices";
+import AntiwrinklesServices from "../../modules/Services/AntiwrinklesServices/AntiwrinklesServices";
 import FaqServices from "../../modules/Services/FaqServices/FaqServices";
 import HeroServices from "../../modules/Services/HeroServices/HeroServices";
 import IndicationsServices from "../../modules/Services/IndicationsSevices/IndicationsServives";
@@ -11,6 +12,7 @@ export default function ServicesPage(){
         <MyServices /> {/* /behandlungsangebote/kundenbewertung */} {/* /behandlungsangebote/akupunktur */}
         <AdvantagesServices /> {/* /behandlungsangebote/kundenbewertung */} {/* /behandlungsangebote/akupunktur */}
         <IndicationsServices /> {/* /behandlungsangebote/akupunktur */}
+            <AntiwrinklesServices /> {/* /behandlungsangebote/regenerative */}
         <FaqServices />
       </>
     );
